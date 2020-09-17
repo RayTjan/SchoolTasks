@@ -30,7 +30,7 @@ public class KonfirmationDialog extends AppCompatDialogFragment {
 
         AlertDialog.Builder confirm = new AlertDialog.Builder(getActivity())
                 .setMessage("Ae you sure you want to delete " + arr.get(poss).getMtext1()+ " ?")
-                .setTitle("ALERT")
+                .setTitle("KONFIRMASI")
                 .setNegativeButton("NO",null)
                 .setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
