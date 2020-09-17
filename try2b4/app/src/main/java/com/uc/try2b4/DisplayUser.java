@@ -59,7 +59,6 @@ public class DisplayUser extends AppCompatActivity {
             }
         });
 
-
         UpdateUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

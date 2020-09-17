@@ -40,6 +40,8 @@ public class KonfirmationDialog extends AppCompatDialogFragment {
                         delete.putExtra("what2",arr);
                         delete.putExtra("pos",poss);
                         Toast.makeText(getActivity(), "Deleted Successfully", Toast.LENGTH_SHORT).show();
+                        final LoadingDialog loadingDialog = new LoadingDialog(getActivity());
+                        loadingDialog.startLoadingDialog();
                         startActivity(delete);
                     }
                 });
