@@ -9,6 +9,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -82,9 +83,11 @@ public class AddActivity extends AppCompatActivity {
                     viewRes.putExtra(MainActivity.transfer1, itemlist1);
                 }
                 if (update ==false){
+                    Toast.makeText(AddActivity.this, "Saved Successfully", Toast.LENGTH_SHORT).show();
                     startActivity(viewRes);
                 }
                 else{
+                    Toast.makeText(AddActivity.this, "Updated Successfully", Toast.LENGTH_SHORT).show();
                     startActivity(updateIntent);
                 }
                 finish();
