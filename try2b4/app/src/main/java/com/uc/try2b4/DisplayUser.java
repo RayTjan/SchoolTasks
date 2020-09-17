@@ -1,5 +1,6 @@
 package com.uc.try2b4;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -50,10 +51,11 @@ public class DisplayUser extends AppCompatActivity {
         deleteUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent home = new Intent(DisplayUser.this, MainActivity.class);
-                itemlist.remove(position);
-                home.putExtra("what2",itemlist);
-                startActivity(home);
+                openDialog();
+//                Intent home = new Intent(DisplayUser.this, MainActivity.class);
+//                itemlist.remove(position);
+//                home.putExtra("what2",itemlist);
+//                startActivity(home);
             }
         });
 
@@ -78,5 +80,10 @@ public class DisplayUser extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    private void openDialog() {
+        KonfirmationDialog dialog = new KonfirmationDialog(itemlist,position);
+        dialog.show(getSupportFragmentManager(),"anything");
     }
 }
