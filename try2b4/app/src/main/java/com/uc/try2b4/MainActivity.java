@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (getIntent().getParcelableArrayListExtra("what2")!=null){
             itemlist =getIntent().getParcelableArrayListExtra("what2");
             itemlist1.setItemlist(itemlist);
+            saveArray(itemlist);
+
         }
 
     }
