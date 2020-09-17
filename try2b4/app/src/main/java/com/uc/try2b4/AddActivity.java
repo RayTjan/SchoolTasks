@@ -47,7 +47,7 @@ public class AddActivity extends AppCompatActivity {
             updatelist =getIntent().getParcelableArrayListExtra("what2");
             object = updatelist.get(position);
             detail1.getEditText().setText(object.getMtext1());
-            detail2.getEditText().setText (object.getMtext2());
+            detail2.getEditText().setText (object.getMtext2().replaceAll("\\D",""));
             detail3.getEditText().setText (object.getMtext3());
             back.setTitle("Update");
         }
@@ -64,7 +64,7 @@ public class AddActivity extends AppCompatActivity {
                     itemlist = updatelist;
                     itemlist1 = new ArrayBox();
                     itemlist.get(position).setMtext1(Detail1);
-                    itemlist.get(position).setMtext2(Detail2);
+                    itemlist.get(position).setMtext2(Detail2 +" years old");
                     itemlist.get(position).setMtext3(Detail3);
                     updateIntent.putExtra("what2",itemlist);
                 }
