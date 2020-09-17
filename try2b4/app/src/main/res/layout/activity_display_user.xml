@@ -43,12 +43,32 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@drawable/button_setter" />
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/DisplayName"
+        app:layout_constraintTop_toBottomOf="@+id/DisplayName"
+        app:srcCompat="@drawable/button_setter" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/DisplayName"
+        app:layout_constraintTop_toBottomOf="@+id/DisplayAge"
+        app:srcCompat="@drawable/button_setter" />
+
     <TextView
-        android:id="@+id/DisplayName"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:text="TextView"
+        android:layout_marginTop="8dp"
+        android:text="Nama"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,49 +76,59 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
+        android:id="@+id/DisplayName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="Age :"
+        android:text="Age"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
     <TextView
         android:id="@+id/DisplayAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
         android:text="TextView"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/DisplayName" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/location" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8" />
 
     <TextView
         android:id="@+id/DisplayAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="TextView"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/DisplayAge" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
 
     <Button
         android:id="@+id/EditUserButton"
