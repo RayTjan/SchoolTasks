@@ -28,7 +28,7 @@ public class KonfirmationDialog extends AppCompatDialogFragment {
 
 
         AlertDialog.Builder confirm = new AlertDialog.Builder(getActivity())
-                .setMessage("Apakah tentu mau delete ")
+                .setMessage("Apakah tentu mau delete " + arr.get(poss).getMtext1())
                 .setTitle("ALERT")
                 .setNegativeButton("NO",null)
                 .setPositiveButton("OK", new DialogInterface.OnClickListener() {
