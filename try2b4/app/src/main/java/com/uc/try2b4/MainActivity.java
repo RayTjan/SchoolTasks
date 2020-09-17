@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -25,21 +26,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private RecyclerView.LayoutManager layoutmanager;
     private ArrayList<items> itemlist;
     private static boolean press = false;
-
+    TextView non;
     public static final String SHARED_PREFS = "sharedPrefs";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        non = findViewById(R.id.noData);
         createitemlist();
         buildRecyclerView();
 
         //Floatin Action Button
         FloatingActionButton addU = findViewById(R.id.main_button_FAB);
         addU.setOnClickListener(this);
-
+        if (!itemlist.isEmpty()){
+            non.setText("");
+        }
+        else{
+            non.setText("No Data");
+        }
         //Carditem & Recycled View
 
 
@@ -77,7 +83,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             saveArray(itemlist);
 
         }
-
+        if (!itemlist.isEmpty()){
+            non.setText("");
+        }
+        else{
+            non.setText("No Data");
+        }
     }
 
     public void buildRecyclerView() {

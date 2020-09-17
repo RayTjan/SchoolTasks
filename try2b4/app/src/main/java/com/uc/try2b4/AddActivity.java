@@ -50,6 +50,7 @@ public class AddActivity extends AppCompatActivity {
             detail2.getEditText().setText (object.getMtext2().replaceAll("\\D",""));
             detail3.getEditText().setText (object.getMtext3());
             back.setTitle("Update");
+            submit.setText("Update data");
         }
 
         submit.setOnClickListener(new View.OnClickListener() {
