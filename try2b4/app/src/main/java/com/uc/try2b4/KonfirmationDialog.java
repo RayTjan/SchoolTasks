@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,6 +39,7 @@ public class KonfirmationDialog extends AppCompatDialogFragment {
                         arr.remove(poss);
                         delete.putExtra("what2",arr);
                         delete.putExtra("pos",poss);
+                        Toast.makeText(getActivity(), "Deleted Successfully", Toast.LENGTH_SHORT).show();
                         startActivity(delete);
                     }
                 });
