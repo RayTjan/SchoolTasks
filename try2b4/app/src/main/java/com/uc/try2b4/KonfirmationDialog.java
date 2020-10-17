@@ -26,8 +26,6 @@ public class KonfirmationDialog extends AppCompatDialogFragment {
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
 
-
-
         AlertDialog.Builder confirm = new AlertDialog.Builder(getActivity())
                 .setMessage("Are you sure you want to delete " + arr.get(poss).getMtext1()+ " ?")
                 .setTitle("KONFIRMASI")
