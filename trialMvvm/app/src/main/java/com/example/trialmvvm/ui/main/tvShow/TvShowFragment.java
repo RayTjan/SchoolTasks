@@ -23,10 +23,12 @@ import com.example.trialmvvm.etc.MovieAdapter;
 import com.example.trialmvvm.etc.TvShowAdapter;
 import com.example.trialmvvm.model.Movie;
 import com.example.trialmvvm.model.TvShow;
+import com.example.trialmvvm.ui.MainActivity;
 import com.example.trialmvvm.ui.main.movie.MovieViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -65,6 +67,7 @@ public class TvShowFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this,view);
+        Objects.requireNonNull(((MainActivity) requireActivity()).getSupportActionBar()).setLogo(R.drawable.ic_baseline_live_tv_black);
 
         listTvShow = new ArrayList<TvShow>();
         rvTvShow.setLayoutManager(new LinearLayoutManager(getActivity()));

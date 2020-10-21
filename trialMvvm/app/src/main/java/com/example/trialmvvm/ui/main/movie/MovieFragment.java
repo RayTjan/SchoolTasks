@@ -93,6 +93,8 @@ public class MovieFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
 
+        Objects.requireNonNull(((MainActivity) requireActivity()).getSupportActionBar()).setLogo(R.drawable.ic_baseline_movie_black);
+
 
         listMovie = new ArrayList<Movie>();
         rvMovie.setLayoutManager(new LinearLayoutManager(getActivity()));
