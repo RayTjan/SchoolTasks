@@ -35,14 +35,19 @@
 
             <TextView
                 android:id="@+id/textView_MdisplayTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="200dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
+                android:layout_marginEnd="24dp"
                 android:fontFamily="@font/blockletter"
-                android:text="TextView"
+                android:gravity="left"
+                android:lines="2"
+                android:maxLines="2"
+                android:text="SOMETHIHGSOMETHING SOMETHING"
                 android:textColor="@color/colorAccent"
-                android:textSize="30sp"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView_MTPoster"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewMTCover" />
 
@@ -158,15 +163,13 @@
                 android:id="@+id/textView_detailVote"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
                 android:background="@drawable/vote_box"
                 android:padding="3dp"
                 android:text="TextView"
                 android:textColor="@color/colorBGDark"
                 android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageView_MTPoster"
-                app:layout_constraintTop_toBottomOf="@+id/textView_MdisplayTitle" />
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_MTPoster"
+                app:layout_constraintEnd_toEndOf="@+id/imageView_MTPoster" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
